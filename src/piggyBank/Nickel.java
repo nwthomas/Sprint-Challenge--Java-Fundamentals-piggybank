@@ -2,8 +2,8 @@ package piggyBank;
 
 public class Nickel extends AbstractMoney
 {
-	private int value = 5;
-	private int totalValue = 0;
+	private double value = 0.05;
+	private double totalValue = 0;
 	private int totalCoins = 0;
 
 	public Nickel()
@@ -19,7 +19,7 @@ public class Nickel extends AbstractMoney
 	}
 
 	@Override
-	public int getTotalValue()
+	public double getTotalValue()
 	{
 		return totalValue;
 	}

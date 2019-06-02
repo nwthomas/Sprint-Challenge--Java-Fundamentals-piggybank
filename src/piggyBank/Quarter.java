@@ -2,8 +2,8 @@ package piggyBank;
 
 public class Quarter extends AbstractMoney
 {
-	private int value = 25;
-	private int totalValue = 0;
+	private double value = 0.25;
+	private double totalValue = 0;
 	private int totalCoins = 0;
 
 	public Quarter()
@@ -19,7 +19,7 @@ public class Quarter extends AbstractMoney
 	}
 
 	@Override
-	public int getTotalValue()
+	public double getTotalValue()
 	{
 		return totalValue;
 	}

@@ -2,8 +2,8 @@ package piggyBank;
 
 public class Dollar extends AbstractMoney
 {
-	private int value = 100;
-	private int totalValue = 0;
+	private double value = 1.00;
+	private double totalValue = 0;
 	private int totalCoins = 0;
 
 	public Dollar()
@@ -19,7 +19,7 @@ public class Dollar extends AbstractMoney
 	}
 
 	@Override
-	public int getTotalValue()
+	public double getTotalValue()
 	{
 		return totalValue;
 	}

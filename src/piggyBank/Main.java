@@ -1,6 +1,7 @@
 package piggyBank;
 
 import java.util.*;
+import java.text.DecimalFormat;
 
 public class Main
 {
@@ -15,10 +16,15 @@ public class Main
 		piggyBank.add(new Dollar());
 		piggyBank.add(new Penny(10));
 
+		double total = 0;
 		for (AbstractMoney c : piggyBank)
 		{
-			System.out.println(c.getTotalCoins());
+			total += c.getTotalValue(); // Add up total in piggy bank for later use
+			System.out.println(c.getTotalCoins()); // Print requested phrases to screen per README
 		}
+
+		DecimalFormat fp = new DecimalFormat("$###,###.00");
+		System.out.println("The piggy bank holds " + fp.format(total));
 	}
 
 	public static void main(String[] args)

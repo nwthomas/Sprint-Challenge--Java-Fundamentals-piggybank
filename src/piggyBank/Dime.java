@@ -2,8 +2,8 @@ package piggyBank;
 
 public class Dime extends AbstractMoney
 {
-	private int value = 10;
-	private int totalValue = 0;
+	private double value = 0.10;
+	private double totalValue = 0;
 	private int totalCoins = 0;
 
 	public Dime()
@@ -19,7 +19,7 @@ public class Dime extends AbstractMoney
 	}
 
 	@Override
-	public int getTotalValue()
+	public double getTotalValue()
 	{
 		return totalValue;
 	}
