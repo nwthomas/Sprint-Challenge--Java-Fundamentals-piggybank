@@ -8,26 +8,32 @@ public class Dime extends AbstractMoney
 
 	public Dime()
 	{
+		totalCoins = 1;
 		totalValue = value;
-		return value;
 	}
 
 	public Dime(int coins)
 	{
 		totalValue = value * coins;
 		totalCoins = coins;
-		return totalValue;
 	}
 
 	@Override
-	public static int getTotalValue()
+	public int getTotalValue()
 	{
 		return totalValue;
 	}
 
 	@Override
-	public static int getTotalCoins()
+	public String getTotalCoins()
 	{
-		return totalCoins;
+		if (totalCoins == 1)
+		{
+			return totalCoins + " Dime";
+		}
+		else 
+		{
+			return totalCoins + " Dimes";
+		}
 	}
 }

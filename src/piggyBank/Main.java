@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Main
 {
-	public void workWithData()
+	public static void workWithData()
 	{
 		ArrayList<AbstractMoney> piggyBank = new ArrayList<AbstractMoney>();
 		piggyBank.add(new Quarter());
@@ -14,6 +14,11 @@ public class Main
 		piggyBank.add(new Dime(7));
 		piggyBank.add(new Dollar());
 		piggyBank.add(new Penny(10));
+
+		for (AbstractMoney c : piggyBank)
+		{
+			System.out.println(c.getTotalCoins());
+		}
 	}
 
 	public static void main(String[] args)

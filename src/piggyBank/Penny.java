@@ -8,26 +8,32 @@ public class Penny extends AbstractMoney
 
 	public Penny()
 	{
+		totalCoins = 1;
 		totalValue = value;
-		return value;
 	}
 
 	public Penny(int coins)
 	{
 		totalValue = value * coins;
 		totalCoins = coins;
-		return totalValue;
 	}
 
 	@Override
-	public static int getTotalValue()
+	public int getTotalValue()
 	{
 		return totalValue;
 	}
 
 	@Override
-	public static int getTotalCoins()
+	public String getTotalCoins()
 	{
-		return totalCoins;
+		if (totalCoins == 1)
+		{
+			return totalCoins + " Penny";
+		}
+		else 
+		{
+			return totalCoins + " Pennies";
+		}
 	}
 }

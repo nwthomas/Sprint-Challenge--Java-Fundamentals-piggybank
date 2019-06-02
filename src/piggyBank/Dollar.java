@@ -8,26 +8,25 @@ public class Dollar extends AbstractMoney
 
 	public Dollar()
 	{
+		totalCoins = 1;
 		totalValue = value;
-		return value;
 	}
-	
+
 	public Dollar(int coins)
 	{
 		totalValue = value * coins;
 		totalCoins = coins;
-		return totalValue;
 	}
 
 	@Override
-	public static int getTotalValue()
+	public int getTotalValue()
 	{
 		return totalValue;
 	}
 
 	@Override
-	public static int getTotalCoins()
+	public String getTotalCoins()
 	{
-		return totalCoins;
+		return "$" + totalCoins;
 	}
 }
